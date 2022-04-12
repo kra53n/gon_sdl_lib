@@ -1,7 +1,6 @@
 #include <malloc.h>
 #include <stdio.h>
 
-#include "window.h"
 #include "gon.h"
 
 const float RADIAN = M_PI / 180;
