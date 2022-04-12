@@ -1,23 +1,10 @@
-#include <SDL2/SDL.h>
 #include <malloc.h>
 #include <stdio.h>
+
+#include "window.h"
 #include "gon.h"
 
 const float RADIAN = M_PI / 180;
-
-struct MegagonVertex
-{
-    int pos;
-    int size;
-};
-
-struct Megagon
-{
-    SDL_Point pos;
-    int vertexesNum;
-    MegagonVertex* vertexes;
-    float size;
-};
 
 void MegagonDraw(Megagon meg)
 {
@@ -37,8 +24,9 @@ void MegagonDraw(Megagon meg)
     }
 }
 
-void MegagonInit(Megagon &meg, int vertexesNum, int size)
+void MegagonInit(Megagon& meg, SDL_Point pos, int vertexesNum, float size)
 {
+    meg.pos = pos;
     meg.vertexesNum = vertexesNum;
     meg.vertexes = (MegagonVertex*)malloc(sizeof(MegagonVertex) * meg.vertexesNum);
     if (meg.vertexes == NULL) { printf("Memory error int RectInit!"); exit(1); }
