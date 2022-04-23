@@ -23,7 +23,7 @@ struct Megagon
 };
 
 void MegagonInit(Megagon& meg, SDL_Point pos, int vertexesNum, float size);
-void MegagonFree(Megagon meg);
+void MegagonDestroy(Megagon meg);
 
 void MegagonDraw(Megagon meg);
 bool MegagonIsClicked(Megagon meg, int x, int y);

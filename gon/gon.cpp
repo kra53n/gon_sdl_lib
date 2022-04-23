@@ -27,7 +27,7 @@ void MegagonInit(Megagon& meg, SDL_Point pos, int vertexesNum, float size)
     }
 }
 
-void MegagonFree(Megagon meg)
+void MegagonDestroy(Megagon meg)
 {
     free(meg.vertexes);
 }
