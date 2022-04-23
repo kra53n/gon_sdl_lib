@@ -5,7 +5,7 @@ I'm not sure if anyone needs this lib. ¯\\_(ツ)_/¯.
 
 ## Example
 
-To work, you need to use SDL_Renderer as ren. In `window.h` I have `winWdt`,
+To work, you need to use `SDL_Renderer` as `ren`. In `window.h` I have `winWdt`,
 `winHgt` and etc for window drawing.
 
 
